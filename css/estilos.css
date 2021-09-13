@@ -1,0 +1,319 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/*Darle estilos de fuente*/
+body{
+    font-family: "Open Sans", Arial, Sans-serif;
+    font-size: 16px;
+}
+
+/*Centrar todo contenido y especificar ancho de la pagina*/
+.contenedor{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+/*header o encabezado*/
+header{
+    width: 100%;
+    /*background: url('../img/fondo.jpg') #14213D;*/
+    background-color: #14213D;
+    background-size: cover;
+	background-attachment: fixed; /*fondo pegado*/
+	background-position: center 0; /*Modificar esto despues ya que no tengo una imagen*/
+}
+    /*Mover propiedades del contenedor*/
+    header .contenedor {
+        position: relative;
+        height: 550px; /*Cambiar tamaño del encabezado*/
+    }
+    /*Comenzar a manipular el menú*/
+    header .menu {
+        width: 100%;
+        text-align:right;
+    }
+    /*acceder a los enlaces*/
+    header .menu a{
+        color: #FFFFFF;
+        font-size: 20;
+        font-weight: 300; /*Tipo de letra*/
+        display: inline-block;
+        margin: 40px 20px;
+	    text-decoration: none;
+	    position: relative; /*Para posteriormente utiliza JS*/
+    }
+    /*mause sobre el enlace*/
+    header .menu a:hover {
+        text-decoration: underline;
+    }
+    /*Siguiente son los textos*/
+    header .textos {
+        width: 100%;
+        color: #fff;
+        position: absolute; /*Para posteriormente utilizar JS parallax*/
+        top: 50%;
+        margin-top: -52px; /*Calcularlo al centro*/
+    }
+    /*darle estilos al nombre*/
+    header .textos .nombre {
+        font-size: 50px;
+        font-weight: 600; /*letra*/
+    }
+    /*darle estilos al span dentro del nombre*/
+    header .textos .nombre span {
+        font-weight: 300;/* letra*/
+    }
+/*MAIN*/
+.main{ /*Agregar textura a la pagina*/
+    background: url('../img/bg_textura.png');
+    background-repeat: repeat;
+}
+/*ACERCA-DE*/
+.main .acerca-de .contenedor{
+    overflow: visible;
+    position: relative; /*Para cuentiones de manipular JS*/
+}
+    /*Modificar la propiedades del contenedor de la foto*/
+    .main .acerca-de .foto{
+        width: 80%; /*Este es el tamaño de la foto*/
+        position: absolute;/*al ser absoluta sobre relativa deja que se manipulen elementos*/
+        left: 0;
+        top: -100px;
+        z-index: 0; /*Foto este debajo del texto*/
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.35);
+        box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.35);
+    }
+    /*Hacer que se ocupe el 100%*/
+    .main .acerca-de .foto img{
+        vertical-align: top;
+        width: 100%;
+    }
+    /*Modificar el Article*/
+    .main .acerca-de article{
+        background: #fff;
+        padding: 40px;
+        width: 50%;
+        position: relative; /*Manipular la posicion del cuadro*/
+        top: 300px;
+        /*top: 150px;*/
+        z-index: 1;
+        float: right;
+        box-shadow: 0px 0px 15px rgba(0,0,0,0.35);
+    }
+    .main .acerca-de .titulo{
+        font-size: 40px;
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .main .acerca-de article h3{
+        font-size: 50px;
+        font-weight: 300;
+        margin-bottom: 30px;
+    }
+    .main .acerca-de article p{
+        line-height: 20px;
+        margin-bottom: 15px;
+        text-align: justify;
+    }
+/*Habilidades*/
+.main .habilidades {
+    padding-top: 450px; /*Margen que maneja esta seccion*/
+    margin-bottom: 50px;
+}
+    /*Trabajar fuente del titulo*/
+    .main .habilidades .titulo{
+        font-size: 40px;
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    /*Darle estilos al contenedor*/
+    .main .habilidades .contenedor-habilidades, 
+    .main .habilidades .contenedor-habilidades2{
+        border: 1px solid #000;
+        background: transparent;
+        padding: 10px;
+        overflow: hidden;
+    }
+    .main .habilidades article{
+        width: 25%;
+        text-align: center;
+        float: left;
+        padding: 20px;
+    }
+    /*Agregue imagenes a mis habilidades*/
+    .main .habilidades img{
+        width: 100px;
+        height: 100px;
+    }
+    /*dar espacio y diseño a las habilidades*/
+    .main .habilidades .lenguaje1{
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 4px dotted #14213D;
+        overflow: hidden;
+    }
+    /*Trabajar con el nombre*/
+    .main .habilidades .nombre{
+        font-size: 20px;
+        margin-bottom: 15px;
+        color: #14213D;
+        /*float: left;*/
+    }
+    .main .habilidades .rango{
+        font-size: 15px;
+        color: #3f3e3e;
+    }
+/*Proyectos*/
+.main .proyectos{
+    overflow: hidden;
+}
+    .main .proyectos .titulo{
+        font-size: 40px;
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    /*Trabajar con las fotos*/
+    .main .proyectos .foto{
+        width: 25%;
+        float: left;
+    }
+    /*Acceder a la imagen*/
+    .main .proyectos .foto img{
+        width: 100%;
+        vertical-align: top;
+        opacity: .5;
+    }
+    /*Efecto hover*/
+    .main .proyectos .foto img:hover{
+        opacity: 1;
+        -webkit-transition: all .3s ease ;
+        -o-transition: all .3s ease ;
+        transition: all .3s ease ;
+    }
+/*CONTACTO*/
+/*La modificare de una forma amigable a la interfaz*/
+.main .contacto{
+    background: #E5E5E5;
+    padding: 60px 0;
+    overflow: hidden;
+}
+    /*Modificar titulo*/
+    .main .contacto .titulo{
+        font-size: 40px;
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .main .contacto .contenedor .redes{
+        /*background: red; Solo era para testear*/
+        width: 100%;
+        text-align:center;
+    }
+    .main .contacto .contenedor .redes div{
+        /*background: yellow; Solo era para testear*/
+        width: 20%;
+        display: inline-block;      
+    }
+    .main .contacto .contenedor .redes div a{
+        width: 100%;
+        color: #14213D; /*Color del icono*/
+        font-size: 40px; /*Tamaño del icono*/
+        margin: 40px 20px;
+	    text-decoration: none;
+    }
+    .main .contacto .contenedor .redes .facebook a{
+        color: #1877f2;
+    }
+    .main .contacto .contenedor .redes .instagram a{
+        color: #c13584;
+    }
+    .main .contacto .contenedor .redes .linkedin a{
+        color: #0077b5;
+    }
+    .main .contacto .contenedor .redes .whatsapp a{
+        color: #25d366;
+    }
+/*footer*/
+footer{
+    background: #000;
+}
+    /*Modificar estilo de copyright*/
+    footer .copyright{
+        text-align: center;
+        padding: 20px 0;
+        color: #fff;
+    }
+
+/*Responsive con mediaqueries*/
+@media screen and (max-width: 800px){
+    header .contenedor {
+		position: static; /*Para ya no colocar efectos parallax*/
+		height: auto; /*Antes era fijo de 700px ahora es automatico*/
+	}
+	header .textos {
+		position: static;
+		margin: 100px 0;
+    }
+    header .menu{
+        text-align: center; /*Alinear el menu*/
+    }
+    header .menu a{
+        margin: 10px 20px;
+    }
+    header .textos .nombre{
+        font-size: 30px;
+    }
+    header .textos h3{
+        font-size: 18px;
+    }
+    .main .acerca-de .foto{
+        position: relative;
+        width: 100%;
+        top: -50px;
+    }
+    .main .acerca-de article{
+        position: relative;
+        width: 100%;
+        top: -50px;
+        transform: translate(0px, 0); /*Por Jquery*/
+    }
+    .main .habilidades{
+        padding-top: 300px;
+    }
+    .main .habilidades article{
+        width: 50%;
+    }
+    .main .proyectos .foto{
+        width: 50%;
+    }
+    .main .contacto .titulo{
+        margin-bottom: 10px;
+    }
+    .main .contacto .contenedor .redes div{
+        width: 40%;  
+        margin-top: 30px;  
+    }
+
+    @media screen and (max-width: 400px) {
+        .main .acerca-de article h3{
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .main .habilidades article{
+            width: 100%;
+        }
+        .main .habilidades article .nombre,
+        .main .habilidades article .rango{
+            font-size: 16px;
+            line-height: 16px;
+        }
+    }
+}
